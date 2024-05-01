@@ -1,0 +1,131 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(fikri/montanas-a-traves-de-lago-y-arboles-en-canada_1920x1080_9303.webp);
+}
+.container
+{
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container i
+{
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff;
+  transition: 0.5s;
+}
+.container i:nth-child(1)
+{
+  border-radius: 43% 57% 74% 26% / 44% 30% 70% 56%;
+  animation: animate 6s linear infinite;
+}
+.container i:nth-child(2)
+{
+  border-radius: 62% 38% 42% 58% / 52% 38% 62% 48%;
+  animation: animate 4s linear infinite;
+}
+.container i:nth-child(3)
+{
+  border-radius: 44% 56% 16% 54% / 37% 65% 35% 63%;
+  animation: animate2 10s linear infinite;
+}
+@keyframes animate
+{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate2
+{
+  0%
+  {
+    transform: rotate(360deg);
+  }
+  100%
+  {
+    transform: rotate(0deg);
+  }
+}
+.container:haver i
+{
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+.container .Login
+{
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.container .Login h2
+{
+  font-size: 2em;
+  color: #fff;
+}
+.container .Login .inputBx
+{
+  position: relative;
+  width: 100%;
+}
+.container .Login .inputBx input
+{
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+.container .Login .inputBx input::placeholder
+{
+  color: rgba(255,255,255,0.75);
+}
+.container .Login .inputBx input[type="submit"]
+{
+  background: linear-gradient(45deg, #ff357a, #fff172);
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+.container .Login .Links
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.container .Login .Links a
+{
+  color: #fff;
+  text-decoration: none;
+}
